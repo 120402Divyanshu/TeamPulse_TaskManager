@@ -1,0 +1,21 @@
+{
+  "name": "teampulse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Team Task Manager — full-stack monorepo",
+  "scripts": {
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "mongoose": "^9.6.1"
+  }
+}
